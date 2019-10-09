@@ -7,12 +7,38 @@
     tools:context=".eventView">
 
     <TextView
-        android:id="@+id/events"
+        android:id="@+id/tEvents"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="events"
+        android:layout_marginTop="92dp"
+        android:text="@string/events"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="87dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/bCreateEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="592dp"
+        android:text="@string/create_event"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/i3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/LOGO1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

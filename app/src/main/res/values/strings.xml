@@ -5,6 +5,12 @@
     <string name="login">login</string>
     <string name="title">EVENT LOGIN</string>
     <string name="title_activity_event_display">EventDisplay</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="username">enter username</string>
+    <string name="password">enter password</string>
+    <string name="signup">sign up</string>
+    <string name="confirm_password">confirm password</string>
+
     <string name="large_text">
         "Material is the metaphor.\n\n"
 

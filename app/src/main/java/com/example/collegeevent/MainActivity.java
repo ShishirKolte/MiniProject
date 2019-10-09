@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button login = (Button) findViewById(R.id.bLogin);
-    private TextView register = (TextView) findViewById(R.id.tRegisterRedirect);
+    private Button login;
+    private TextView register;
 
 
     @Override
@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        register =  findViewById(R.id.tSignUpLink);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
+        login =   findViewById(R.id.bLogin);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,7 +44,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void openEventView()
     {
-
+        Intent intent;
+        intent = new Intent(this, eventView.class);
+        startActivity(intent);
     }
 
     public void openActivityRegister()

@@ -3,6 +3,7 @@
     <string name="emailhint">enter your email id</string>
     <string name="passhint">enter your password</string>
     <string name="login">login</string>
+    <string name="sign_up_link">not registered? sign up here</string>
     <string name="title">EVENT LOGIN</string>
     <string name="title_activity_event_display">EventDisplay</string>
     <string name="sign_up">Sign Up</string>
@@ -12,7 +13,16 @@
     <string name="confirm_password">confirm password</string>
     <string name="events">EVENTS</string>
     <string name="create_event">create new event</string>
+    <string name="create_event1">CREATE NEW EVENT</string>
     <string name="register_redirect">not registered? sign up here!</string>
+    <string name="event_name_main">enter main event name</string>
+    <string name="event_name_sub">enter sub event name</string>
+    <string name="competition_name">enter competition name</string>
+    <string name="date">date</string>
+    <string name="time">time</string>
+    <string name="event_details">event details</string>
+    <string name="levels">levels</string>
+    <string name="create_even_button">create</string>
 
     <string name="large_text">
         "Material is the metaphor.\n\n"

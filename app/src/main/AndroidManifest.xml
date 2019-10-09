@@ -4,14 +4,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/tentative"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/tentative_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".create_event"></activity>
         <activity android:name=".eventView" />
-        <activity android:name=".registerActivity" />
+        <activity android:name=".registerActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

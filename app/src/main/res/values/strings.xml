@@ -23,6 +23,19 @@
     <string name="event_details">event details</string>
     <string name="levels">levels</string>
     <string name="create_even_button">create</string>
+    <string name="register">REGISTER</string>
+    <string name="name_register">name</string>
+    <string name="college_register">college name</string>
+    <string name="mobile_register">mobile number</string>
+    <string name="email_register">email id</string>
+    <string name="date_register">date</string>
+    <string name="time_register">time</string>
+    <string name="year_register">year</string>
+    <string name="register_student">register</string>
+    <string name="register_link">register</string>
+    <string name="view_list_link">view list</string>
+    <string name="view_result_link">view result</string>
+    <string name="event_name">EVENT: </string>
 
     <string name="large_text">
         "Material is the metaphor.\n\n"

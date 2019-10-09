@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/tentative_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".create_event"></activity>
+        <activity android:name=".EventActions"></activity>
+        <activity android:name=".registerStudent" />
+        <activity android:name=".create_event" />
         <activity android:name=".eventView" />
-        <activity android:name=".registerActivity"/>
+        <activity android:name=".registerActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

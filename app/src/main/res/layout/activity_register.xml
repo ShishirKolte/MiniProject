@@ -8,13 +8,13 @@
 
     <TextView
         android:id="@+id/tSignUpLink"
-        android:layout_width="272dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="200dp"
+        android:layout_width="277dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="245dp"
         android:text="@string/sign_up"
         android:textAlignment="center"
 
-        android:textSize="20sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +24,7 @@
         android:id="@+id/bSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="444dp"
+        android:layout_marginTop="500dp"
         android:onClick="click"
         android:text="@string/signup"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,11 +36,11 @@
         android:id="@+id/tConfirmPassword"
         android:layout_width="270dp"
         android:layout_height="45dp"
-        android:layout_marginTop="360dp"
+        android:layout_marginTop="400dp"
         android:hint="@string/confirm_password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -48,11 +48,11 @@
         android:id="@+id/tPassword"
         android:layout_width="270dp"
         android:layout_height="45dp"
-        android:layout_marginTop="316dp"
+        android:layout_marginTop="340dp"
         android:hint="@string/password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -60,25 +60,22 @@
         android:id="@+id/tUserName"
         android:layout_width="270dp"
         android:layout_height="45dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginTop="284dp"
         android:hint="@string/username"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="361dp"
+        android:id="@+id/logo1"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/FinalLogo" />
+        app:srcCompat="@drawable/finalLogo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

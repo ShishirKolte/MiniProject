@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "331441779720",
+    "firebase_url": "https://infimanger.firebaseio.com",
+    "project_id": "infimanger",
+    "storage_bucket": "infimanger.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331441779720:android:ff62578eabd99377220dbd",
+        "android_client_info": {
+          "package_name": "com.example.collegeevent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "331441779720-busrndin4h8u0ints0ria0dug5i0qieo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF4-wblCdmzazo1eZxVBYtlMXnkkjyldA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "331441779720-busrndin4h8u0ints0ria0dug5i0qieo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

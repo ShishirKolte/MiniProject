@@ -21,8 +21,8 @@
 
     <EditText
         android:id="@+id/tSubEvent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
         android:layout_marginTop="272dp"
         android:layout_marginEnd="75dp"
         android:ems="10"
@@ -37,60 +37,57 @@
         android:id="@+id/tDate"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="404dp"
+        android:layout_marginTop="408dp"
         android:ems="10"
         android:hint="@string/date"
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintHorizontal_bias="0.279"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/tLevels"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="548dp"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="536dp"
         android:ems="10"
         android:hint="@string/levels"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/tEventDetails"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="476dp"
-        android:layout_marginEnd="92dp"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="472dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="@string/event_details"
         android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.971"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tLevels"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/tTime"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginTop="404dp"
+        android:layout_marginTop="408dp"
         android:ems="10"
         android:hint="@string/time"
         android:inputType="time"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintHorizontal_bias="0.655"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/tEventNameMain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
         android:layout_marginTop="212dp"
         android:ems="10"
         android:hint="@string/event_name_main"
@@ -102,15 +99,13 @@
 
     <EditText
         android:id="@+id/tCompetitionName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
         android:layout_marginTop="332dp"
         android:ems="10"
         android:hint="@string/competition_name"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tEventDetails"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -134,6 +129,6 @@
         app:layout_constraintHorizontal_bias="0.023"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/finalLogo" />
+        app:srcCompat="@drawable/finallogo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

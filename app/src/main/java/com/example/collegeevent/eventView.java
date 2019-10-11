@@ -35,7 +35,7 @@ public class eventView extends AppCompatActivity {
         setContentView(R.layout.activity_event_view);
 
 
-        mDataBase = FirebaseDatabase.getInstance().getReference().child("eventId");
+        mDataBase = FirebaseDatabase.getInstance().getReference().child("events");
 
 
         recyclerView = findViewById(R.id.recycler1);
@@ -55,8 +55,8 @@ public class eventView extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren())
                 {
-                    eventDetailsGetter eventDetailsGetter = dataSnapshot1.getValue(eventDetailsGetter.class);
-                    eventList.add(eventDetailsGetter);
+                    eventDetailsGetter eventDetails = dataSnapshot1.getValue(eventDetailsGetter.class);
+                    eventList.add(eventDetails);
                 }
                 adapter = new eventAdapter(eventView.this,eventList);
                 recyclerView.setAdapter(adapter);

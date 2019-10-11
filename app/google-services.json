@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "331441779720-8p7pca0rifh3pq60d7grckljvcsugfgn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.collegeevent",
+            "certificate_hash": "066260d1ae6f49fe2e00afd7d414878613c17c53"
+          }
+        },
+        {
           "client_id": "331441779720-busrndin4h8u0ints0ria0dug5i0qieo.apps.googleusercontent.com",
           "client_type": 3
         }

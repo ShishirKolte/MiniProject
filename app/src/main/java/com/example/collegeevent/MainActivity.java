@@ -7,8 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
-import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.*;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
+
                 openEventView();
             }
         });
@@ -50,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
         intent = new Intent(this, eventView.class);
         startActivity(intent);
     }
+
+
 
     public void openActivityRegister()
     {

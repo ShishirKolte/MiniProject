@@ -1,23 +1,76 @@
 package com.example.collegeevent;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 public class eventView extends AppCompatActivity {
 
 
     private Button button;
+    private RecyclerView recyclerView;
+    private eventAdapter adapter;
+    public static ArrayList<eventDetailsGetter> eventList;
+    private DatabaseReference mDataBase;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_view);
 
+
+        mDataBase = FirebaseDatabase.getInstance().getReference().child("eventId");
+
+
+        recyclerView = findViewById(R.id.recycler1);
+
+
         button = findViewById(R.id.bCreateNewEvent);
+
+
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+
+        eventList = new ArrayList<eventDetailsGetter>();
+
+        mDataBase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren())
+                {
+                    eventDetailsGetter eventDetailsGetter = dataSnapshot1.getValue(eventDetailsGetter.class);
+                    eventList.add(eventDetailsGetter);
+                }
+                adapter = new eventAdapter(eventView.this,eventList);
+                recyclerView.setAdapter(adapter);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(eventView.this, "Oops... Something went wrong." + databaseError.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -29,4 +82,6 @@ public class eventView extends AppCompatActivity {
 
 
     }
+
+
 }

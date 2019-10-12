@@ -19,7 +19,6 @@ public class create_event extends AppCompatActivity {
     EditText eventDesc;
     FirebaseDatabase DataBase = FirebaseDatabase.getInstance();
     DatabaseReference mDataBase = DataBase.getReference("events");
-    int inc = 0;
 
 
     @Override

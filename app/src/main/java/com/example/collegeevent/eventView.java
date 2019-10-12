@@ -58,7 +58,7 @@ public class eventView extends AppCompatActivity {
                     eventDetailsGetter eventDetails = dataSnapshot1.getValue(eventDetailsGetter.class);
                     eventList.add(eventDetails);
                 }
-                adapter = new eventAdapter(eventView.this,eventList);
+                adapter = new eventAdapter(eventView.this, eventList);
                 recyclerView.setAdapter(adapter);
             }
 
@@ -67,6 +67,7 @@ public class eventView extends AppCompatActivity {
                 Toast.makeText(eventView.this, "Oops... Something went wrong." + databaseError.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
+
 
 
 
@@ -82,6 +83,5 @@ public class eventView extends AppCompatActivity {
 
 
     }
-
 
 }

@@ -1,6 +1,8 @@
 package com.example.collegeevent;
 
-public class eventDetailsGetter {
+import java.io.Serializable;
+
+public class eventDetailsGetter implements Serializable {
 
     private String eventName;
     private String eventDesc;

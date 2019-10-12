@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class eventAdapter extends  RecyclerView.Adapter<eventAdapter.eventViewHolder>{
 
     private Context mCtx;
-    private ArrayList<eventDetailsGetter> eventList;
+    private ArrayList<eventDetailsGetter> eventList ;
 
 
     public eventAdapter(Context mCtx, ArrayList<eventDetailsGetter> eventList) {
@@ -44,6 +44,8 @@ public class eventAdapter extends  RecyclerView.Adapter<eventAdapter.eventViewHo
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(mCtx, EventActions.class);
+                intent.putExtra("eventList", eventList);
+                intent.putExtra("position", position);
                 mCtx.startActivity(intent);
             }
         });

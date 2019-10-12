@@ -32,7 +32,7 @@
     <string name="time_register">time</string>
     <string name="year_register">year</string>
     <string name="register_student">register</string>
-    <string name="register_link">register</string>
+    <string name="register_link">register participant</string>
     <string name="view_list_link">view list</string>
     <string name="view_result_link">view result</string>
     <string name="event_name">EVENT: </string>

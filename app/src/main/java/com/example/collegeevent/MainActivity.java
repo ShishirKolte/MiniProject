@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mAuth = FirebaseAuth.getInstance();
+
         eUserEmail = findViewById(R.id.eUserEmail);
         pUserPassword = findViewById(R.id.pUserPassword);
 
@@ -71,7 +71,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        // [START initialize_auth]
+        // Initialize Firebase Auth
+        mAuth = FirebaseAuth.getInstance();
+        // [END initialize_auth]
     }
 
 
@@ -84,25 +87,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
-    @Override
     public void onStart()
     {
         super.onStart();
 
         // Check if user is signed in (non-null) and update UI accordingly.
-
-
-        mAuth.addAuthStateListener(new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                if(mAuth.getCurrentUser() != null)
-                {
-                    openEventView();
-                }
-            }
-        });
-
+        if(mAuth.getCurrentUser()!= null)
+        {
+            //Move to next page.
+            openEventView();
+        }
 
     }
 

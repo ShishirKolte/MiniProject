@@ -7,7 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+
+import com.google.firebase.auth.*;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 
 public class registerActivity extends AppCompatActivity {
 
@@ -18,10 +26,18 @@ public class registerActivity extends AppCompatActivity {
     private EditText userName;
     private EditText password;
     private EditText confirmPassword;
+
+    // [START declare_auth]
+    private FirebaseAuth mAuth;
+    // [END declare_auth]
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        mAuth = FirebaseAuth.getInstance();
 
         button = findViewById(R.id.bSignUp);
         userName = findViewById(R.id.tUserName);
@@ -31,6 +47,23 @@ public class registerActivity extends AppCompatActivity {
     }
 
     public void click(View view){
+
+        mAuth.createUserWithEmailAndPassword(userName.getText().toString(), password.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful())
+                        {
+                            // Sign in success, update UI with the signed-in user's information
+                            openEventView();
+                        }
+                        else
+                            {
+                            // If sign in fails, display a message to the user.
+                            Toast.makeText(registerActivity.this, "Signup failed.", Toast.LENGTH_SHORT).show();
+                            }
+                    }
+                });
+
 
         try
         {
@@ -55,4 +88,12 @@ public class registerActivity extends AppCompatActivity {
         }
 
     }
+
+    public void openEventView()
+    {
+        Intent intent;
+        intent = new Intent(this, eventView.class);
+        startActivity(intent);
+    }
+
 }

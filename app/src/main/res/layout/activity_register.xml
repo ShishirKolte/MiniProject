@@ -10,72 +10,74 @@
         android:id="@+id/tSignUpLink"
         android:layout_width="277dp"
         android:layout_height="48dp"
-        android:layout_marginTop="245dp"
+        android:layout_marginTop="60dp"
         android:text="@string/sign_up"
+        android:fontFamily="@font/advent_pro"
+        android:textColor="#5E35B1"
         android:textAlignment="center"
-
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/iLogo4" />
 
     <Button
         android:id="@+id/bSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="100dp"
         android:onClick="click"
         android:text="@string/signup"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.783"
+        app:layout_constraintHorizontal_bias="0.739"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tConfirmPassword" />
 
     <EditText
         android:id="@+id/tUserName"
         android:layout_width="270dp"
         android:layout_height="45dp"
-        android:layout_marginTop="304dp"
+        android:layout_marginTop="10dp"
         android:hint="@string/username"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tSignUpLink" />
 
     <EditText
         android:id="@+id/tPassword"
         android:layout_width="270dp"
         android:layout_height="45dp"
-        android:layout_marginTop="360dp"
+        android:layout_marginTop="10dp"
         android:hint="@string/password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tUserName" />
 
     <EditText
         android:id="@+id/tConfirmPassword"
         android:layout_width="270dp"
         android:layout_height="45dp"
-        android:layout_marginTop="412dp"
+        android:layout_marginTop="10dp"
         android:hint="@string/confirm_password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tPassword" />
 
     <ImageView
-        android:id="@+id/logo1"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:id="@+id/iLogo4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="291dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/finallogo" />
+        app:srcCompat="@drawable/edit2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

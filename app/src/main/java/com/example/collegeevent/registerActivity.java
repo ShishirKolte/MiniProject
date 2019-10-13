@@ -27,6 +27,9 @@ public class registerActivity extends AppCompatActivity {
     private EditText password;
     private EditText confirmPassword;
 
+    EditText tUserName;
+    EditText tPassword;
+
     // [START declare_auth]
     private FirebaseAuth mAuth;
     // [END declare_auth]
@@ -44,11 +47,14 @@ public class registerActivity extends AppCompatActivity {
         password = findViewById(R.id.tPassword);
         confirmPassword = findViewById(R.id.tConfirmPassword);
 
+        tUserName = findViewById(R.id.tUserName);
+        tPassword = findViewById(R.id.tPassword);
+
     }
 
     public void click(View view){
 
-        mAuth.createUserWithEmailAndPassword(userName.getText().toString(), password.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        mAuth.createUserWithEmailAndPassword(tUserName.getText().toString(), tPassword.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful())

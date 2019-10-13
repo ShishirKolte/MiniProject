@@ -7,19 +7,16 @@
     tools:context=".create_event">
 
     <TextView
-
         android:id="@+id/tCreateEvent"
         android:layout_width="298dp"
         android:layout_height="40dp"
         android:layout_marginTop="140dp"
-        android:fontFamily="@font/advent_pro"
-        android:textAlignment="center"
-        android:singleLine="true"
         android:text="@string/create_event1"
-        android:textColor="#5E35B1"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="30sp"
+        android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,122 +24,116 @@
         android:id="@+id/tSubEvent"
         android:layout_width="220dp"
         android:layout_height="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="272dp"
         android:layout_marginEnd="75dp"
         android:ems="10"
         android:hint="@string/event_name_sub"
-        android:inputType="textPersonName"
         android:singleLine="true"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.818"
+        app:layout_constraintHorizontal_bias="0.853"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tEventNameMain" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/tDate"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="408dp"
         android:ems="10"
         android:hint="@string/date"
         android:inputType="date"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.263"
+        app:layout_constraintHorizontal_bias="0.279"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tCompetitionName" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/tLevels"
         android:layout_width="220dp"
         android:layout_height="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="536dp"
         android:ems="10"
         android:hint="@string/levels"
-        android:inputType="number"
         android:singleLine="true"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tEventDetails" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/tEventDetails"
         android:layout_width="220dp"
         android:layout_height="50dp"
-        android:layout_marginStart="95dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="95dp"
+        android:layout_marginTop="472dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="@string/event_details"
         android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tCompetitionName" />
+        app:layout_constraintStart_toStartOf="@+id/tLevels"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/tTime"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="408dp"
         android:ems="10"
         android:hint="@string/time"
         android:inputType="time"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.172"
-        app:layout_constraintStart_toEndOf="@+id/tDate"
-        app:layout_constraintTop_toBottomOf="@+id/tCompetitionName" />
+        app:layout_constraintHorizontal_bias="0.655"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/tEventNameMain"
         android:layout_width="220dp"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="212dp"
         android:ems="10"
         android:hint="@string/event_name_main"
         android:inputType="textPersonName"
         android:singleLine="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tCreateEvent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/tCompetitionName"
         android:layout_width="220dp"
         android:layout_height="50dp"
-        android:layout_marginStart="95dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="96dp"
+        android:layout_marginTop="332dp"
         android:ems="10"
         android:hint="@string/competition_name"
-        android:inputType="textPersonName"
         android:singleLine="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tSubEvent" />
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/tEventDetails"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/bCreateEvent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="612dp"
         android:text="@string/create_even_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.702"
+        app:layout_constraintHorizontal_bias="0.693"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tLevels" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/iLogo2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="291dp"
+        android:id="@+id/logo3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/edit2" />
+        app:srcCompat="@drawable/finallogo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

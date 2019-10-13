@@ -35,7 +35,7 @@
     <string name="register_link">register participant</string>
     <string name="view_list_link">view list</string>
     <string name="view_result_link">view result</string>
-    <string name="event_name">EVENT </string>
+    <string name="event_name">EVENT: </string>
 
     <string name="large_text">
         "Material is the metaphor.\n\n"

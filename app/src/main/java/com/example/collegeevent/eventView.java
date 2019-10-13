@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -23,10 +24,15 @@ public class eventView extends AppCompatActivity {
 
 
     private Button button;
+    private Button signout;
     private RecyclerView recyclerView;
     private eventAdapter adapter;
     public static ArrayList<eventDetailsGetter> eventList;
     private DatabaseReference mDataBase;
+
+    // [START declare_auth]
+    private FirebaseAuth mAuth;
+    // [END declare_auth]
 
 
     @Override
@@ -43,6 +49,9 @@ public class eventView extends AppCompatActivity {
 
         button = findViewById(R.id.bCreateNewEvent);
 
+        signout = findViewById(R.id.bCreateNewEvent);
+
+        mAuth = FirebaseAuth.getInstance();
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -81,6 +90,17 @@ public class eventView extends AppCompatActivity {
             }
         });
 
+        signout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                mAuth.signOut();
+                Intent intent;
+                intent = new Intent(eventView.this, MainActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
     }
 

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,13 +27,14 @@ public class MainActivity extends AppCompatActivity {
 
     // [START declare_auth]
     private FirebaseAuth mAuth;
+    private FirebaseUser mUser;
     // [END declare_auth]
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        mAuth = FirebaseAuth.getInstance();
         eUserEmail = findViewById(R.id.eUserEmail);
         pUserPassword = findViewById(R.id.pUserPassword);
 
@@ -71,10 +73,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // [START initialize_auth]
-        // Initialize Firebase Auth
-        mAuth = FirebaseAuth.getInstance();
-        // [END initialize_auth]
+
     }
 
 
@@ -87,16 +86,25 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+    @Override
     public void onStart()
     {
         super.onStart();
 
         // Check if user is signed in (non-null) and update UI accordingly.
-        if(mAuth.getCurrentUser()!= null)
-        {
-            //Move to next page.
-            openEventView();
-        }
+
+
+        mAuth.addAuthStateListener(new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                if(mAuth.getCurrentUser() != null)
+                {
+                    openEventView();
+                }
+            }
+        });
+
 
     }
 

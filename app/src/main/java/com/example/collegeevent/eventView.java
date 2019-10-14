@@ -66,12 +66,31 @@ public class eventView extends AppCompatActivity {
         mDataBase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
                 for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren())
                 {
                     eventDetailsGetter eventDetails = dataSnapshot1.getValue(eventDetailsGetter.class);
-                    if(eventDetails.getEventAdmin().equals(mUser.getUid()))
+                    if(eventDetails.getEventAdmin() != null)
                     {
-                        eventList.add(eventDetails);
+                        if(eventDetails.getEventAdmin().equals(mUser.getUid()))
+                        {
+                            eventList.add(eventDetails);
+                        }
+
+                    }
+                    else
+                    {
+                        if(eventDetails.getEventName() != null)
+                        {
+                            for(DataSnapshot dataSnapshot2 : dataSnapshot.getChildren())
+                            {
+                                if(!eventDetails.getEventName().equals(dataSnapshot2.child("events").child("eventName").toString()))
+                                {
+                                    eventList.add(eventDetails);
+                                }
+                            }
+                        }
+
                     }
 
                 }

@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -18,7 +20,9 @@ public class create_event extends AppCompatActivity {
     EditText eventName;
     EditText eventDesc;
     FirebaseDatabase DataBase = FirebaseDatabase.getInstance();
-    DatabaseReference mDataBase = DataBase.getReference("events");
+    DatabaseReference mEvents = DataBase.getReference("events");
+    FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    FirebaseUser mUser = mAuth.getCurrentUser();
 
 
     @Override
@@ -34,9 +38,10 @@ public class create_event extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                DatabaseReference childref = mDataBase.push();
-                childref.child("eventName").setValue(eventName.getText().toString());
-                childref.child("eventDesc").setValue(eventDesc.getText().toString());
+                DatabaseReference childRef = mEvents.push();
+                childRef.child("eventName").setValue(eventName.getText().toString());
+                childRef.child("eventDesc").setValue(eventDesc.getText().toString());
+                childRef.child("eventAdmin").setValue(mUser.getUid());
 
 
                 Intent intent;

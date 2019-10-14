@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -29,6 +30,7 @@ public class eventView extends AppCompatActivity {
     private eventAdapter adapter;
     public static ArrayList<eventDetailsGetter> eventList;
     private DatabaseReference mDataBase;
+    private FirebaseUser mUser;
 
     // [START declare_auth]
     private FirebaseAuth mAuth;
@@ -52,6 +54,8 @@ public class eventView extends AppCompatActivity {
 
 
         mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -65,7 +69,11 @@ public class eventView extends AppCompatActivity {
                 for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren())
                 {
                     eventDetailsGetter eventDetails = dataSnapshot1.getValue(eventDetailsGetter.class);
-                    eventList.add(eventDetails);
+                    if(eventDetails.getEventAdmin().equals(mUser.getUid()))
+                    {
+                        eventList.add(eventDetails);
+                    }
+
                 }
                 adapter = new eventAdapter(eventView.this, eventList);
                 recyclerView.setAdapter(adapter);

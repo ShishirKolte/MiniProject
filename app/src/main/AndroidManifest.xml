@@ -4,12 +4,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/finallogo"
+        android:icon="@mipmap/edit2"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/finallogo_round"
+        android:roundIcon="@mipmap/edit2"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".EventActions"></activity>
+        android:theme="@style/Theme.AppCompat">
+        <activity android:name=".viewResult"></activity>
+        <activity android:name=".showParticipantList" />
+        <activity android:name=".EventActions" />
         <activity android:name=".registerStudent" />
         <activity android:name=".create_event" />
         <activity android:name=".eventView" />
@@ -21,6 +23,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

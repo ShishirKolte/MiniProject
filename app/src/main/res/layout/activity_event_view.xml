@@ -10,42 +10,41 @@
         android:id="@+id/tEvents"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="25dp"
         android:fontFamily="monospace"
         android:text="@string/events"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#5E35B1"
+        android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iLogo6"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/bCreateNewEvent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="592dp"
+        android:layout_marginTop="50dp"
         android:text="@string/create_event"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/recycler1" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler1"
-        android:layout_width="391dp"
-        android:layout_height="400dp"
-        android:layout_marginTop="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/bCreateNewEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tEvents" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/iLogo6"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="20dp"

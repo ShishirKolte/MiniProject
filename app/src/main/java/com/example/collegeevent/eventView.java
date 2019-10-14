@@ -49,7 +49,7 @@ public class eventView extends AppCompatActivity {
 
         button = findViewById(R.id.bCreateNewEvent);
 
-        signout = findViewById(R.id.bCreateNewEvent);
+
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -90,17 +90,17 @@ public class eventView extends AppCompatActivity {
             }
         });
 
-        signout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view)
-            {
-                mAuth.signOut();
-                Intent intent;
-                intent = new Intent(eventView.this, MainActivity.class);
-                startActivity(intent);
-
-            }
-        });
+//        signout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view)
+//            {
+//                mAuth.signOut();
+//                Intent intent;
+//                intent = new Intent(eventView.this, MainActivity.class);
+//                startActivity(intent);
+//
+//            }
+//        });
 
     }
 

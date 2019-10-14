@@ -33,7 +33,7 @@ public class EventActions extends AppCompatActivity {
         }
         else
         {
-            Toast.makeText(this, "No Data", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Refereshing Data", Toast.LENGTH_SHORT).show();
         }
 
 
@@ -41,6 +41,8 @@ public class EventActions extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(EventActions.this, registerStudent.class);
+                intent.putExtra("position", position);
+                intent.putExtra("eventList", eventList);
                 startActivity(intent);
             }
         });

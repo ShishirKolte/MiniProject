@@ -8,6 +8,8 @@
 
     <Button
         android:id="@+id/bRegisterLink"
+        android:textColor="#ffffffff"
+        android:textAlignment="center"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -18,6 +20,8 @@
 
     <Button
         android:id="@+id/bViewListLink"
+        android:textColor="#ffffffff"
+        android:textAlignment="center"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -27,11 +31,14 @@
         app:layout_constraintTop_toBottomOf="@+id/bRegisterLink" />
 
     <Button
+
         android:id="@+id/bViewResultLink"
+        android:textAlignment="center"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:text="@string/view_result_link"
+        android:textColor="#ffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bViewListLink" />
@@ -63,4 +70,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/edit2" />
+
+    <Button
+        android:id="@+id/bEditEvent"
+        android:textColor="#ffffffff"
+        android:textAlignment="center"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/edit_event"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bViewResultLink" />
 </androidx.constraintlayout.widget.ConstraintLayout>

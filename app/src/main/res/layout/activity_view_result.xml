@@ -33,7 +33,7 @@
         app:layout_constraintTop_toBottomOf="@+id/iLogo7" />
 
     <Button
-        style="?android:attr/borderlessButtonStyle"
+
         android:id="@+id/bDownloadResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

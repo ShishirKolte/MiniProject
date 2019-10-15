@@ -123,7 +123,7 @@
         android:text="@string/create_even_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        style="?android:attr/borderlessButtonStyle"
+
         app:layout_constraintTop_toBottomOf="@+id/tLevels" />
 
     <ImageView

@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class EventActions extends AppCompatActivity {
 
     Button button;
+    Button showList;
     private ArrayList<eventDetailsGetter> eventList = new ArrayList<eventDetailsGetter>() ;
     private int position;
     private TextView eventName;
@@ -24,6 +25,7 @@ public class EventActions extends AppCompatActivity {
         setContentView(R.layout.activity_event_actions);
         button = findViewById(R.id.bRegisterLink);
         eventName = findViewById(R.id.tEventName);
+        showList = findViewById(R.id.bViewListLink);
 
         if(getIntent().hasExtra("eventList"))
         {
@@ -41,6 +43,16 @@ public class EventActions extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(EventActions.this, registerStudent.class);
+                intent.putExtra("position", position);
+                intent.putExtra("eventList", eventList);
+                startActivity(intent);
+            }
+        });
+
+        showList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EventActions.this, showParticipantList.class);
                 intent.putExtra("position", position);
                 intent.putExtra("eventList", eventList);
                 startActivity(intent);

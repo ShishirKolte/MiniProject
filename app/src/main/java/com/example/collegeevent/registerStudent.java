@@ -17,8 +17,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.io.File;
 import java.io.ObjectOutput;
 import java.io.UncheckedIOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 
 public class registerStudent extends AppCompatActivity {
 
@@ -32,8 +34,9 @@ public class registerStudent extends AppCompatActivity {
     EditText participantMobile;
     EditText participantEmail;
     EditText participantYear;
-    EditText particpantRegisterDate;
-    EditText partcipantRegisterTime;
+    String participantRegisterDate;
+    String participantRegisterTime;
+
     int position;
 
 
@@ -55,7 +58,8 @@ public class registerStudent extends AppCompatActivity {
         participantEmail = findViewById(R.id.tEmailRegister);
         participantMobile = findViewById(R.id.tMobileRegister);
         participantYear = findViewById(R.id.tYearRegister);
-
+        participantRegisterDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+        participantRegisterTime = java.text.DateFormat.getTimeInstance().format(new Date());
 
         if(getIntent().hasExtra("eventList"))
         {
@@ -77,6 +81,11 @@ public class registerStudent extends AppCompatActivity {
                 childRef.child("participantEvent").setValue(eventList.get(position).getEventName());
                 childRef.child("participantName").setValue(participantName.getText().toString());
                 childRef.child("participantCollege").setValue(participantCollege.getText().toString());
+                childRef.child("participantEmail").setValue(participantEmail.getText().toString());
+                childRef.child("participantMobile").setValue(participantMobile.getText().toString());
+                childRef.child("participantYear").setValue(participantYear.getText().toString());
+                childRef.child("participantRegisterDate").setValue(participantRegisterDate);
+                childRef.child("participantRegisterTime").setValue(participantRegisterTime);
                 Toast.makeText(registerStudent.this, "Entry Added.", Toast.LENGTH_SHORT).show();
                 onRegisterStudentClick();
             }

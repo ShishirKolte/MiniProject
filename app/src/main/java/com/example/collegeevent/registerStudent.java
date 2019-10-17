@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.format.DateUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,6 +18,7 @@ import java.io.File;
 import java.io.ObjectOutput;
 import java.io.UncheckedIOException;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class registerStudent extends AppCompatActivity {
 
@@ -27,6 +29,11 @@ public class registerStudent extends AppCompatActivity {
     Button button;
     EditText participantName;
     EditText participantCollege;
+    EditText participantMobile;
+    EditText participantEmail;
+    EditText participantYear;
+    EditText particpantRegisterDate;
+    EditText partcipantRegisterTime;
     int position;
 
 
@@ -45,6 +52,10 @@ public class registerStudent extends AppCompatActivity {
         button = findViewById(R.id.bRegisterLink);
         participantName = findViewById(R.id.tNameRegister);
         participantCollege = findViewById(R.id.tCollegeRegister);
+        participantEmail = findViewById(R.id.tEmailRegister);
+        participantMobile = findViewById(R.id.tMobileRegister);
+        participantYear = findViewById(R.id.tYearRegister);
+
 
         if(getIntent().hasExtra("eventList"))
         {

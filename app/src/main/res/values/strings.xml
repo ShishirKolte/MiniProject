@@ -41,7 +41,11 @@
     <string name="download_result">Download Result</string>
     <string name="download_list">Download List</string>
     <string name="logout">Logout</string>
-    <string name="enter_result">Enter result</string>
+    <string name="enter_result">ENTER RESULT</string>
+    <string name="enter_first">enter name of winner</string>
+    <string name="enter_first_runner_up">enter name of first runner up</string>
+    <string name="enter_second_runner_up">enter name of second runner up</string>
+    <string name="done">Done</string>
 
     <string name="large_text">
         "Material is the metaphor.\n\n"

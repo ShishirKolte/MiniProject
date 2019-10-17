@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/edit2"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat">
-        <activity android:name=".viewResult"></activity>
+        <activity android:name=".resultView"></activity>
+        <activity android:name=".viewResult" />
         <activity android:name=".showParticipantList" />
         <activity android:name=".EventActions" />
         <activity android:name=".registerStudent" />

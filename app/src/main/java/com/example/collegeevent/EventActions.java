@@ -15,6 +15,8 @@ public class EventActions extends AppCompatActivity {
 
     Button button;
     Button showList;
+    Button enterResult;
+    Button viewResult;
     private ArrayList<eventDetailsGetter> eventList = new ArrayList<eventDetailsGetter>() ;
     private int position;
     private TextView eventName;
@@ -26,6 +28,8 @@ public class EventActions extends AppCompatActivity {
         button = findViewById(R.id.bRegisterLink);
         eventName = findViewById(R.id.tEventName);
         showList = findViewById(R.id.bViewListLink);
+        enterResult = findViewById(R.id.bEditEvent);
+        viewResult = findViewById(R.id.bViewResultLink);
 
         if(getIntent().hasExtra("eventList"))
         {
@@ -56,6 +60,29 @@ public class EventActions extends AppCompatActivity {
                 intent.putExtra("position", position);
                 intent.putExtra("eventList", eventList);
                 startActivity(intent);
+            }
+        });
+
+        enterResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EventActions.this, resultView.class);
+                intent.putExtra("position", position);
+                intent.putExtra("eventList", eventList);
+                startActivity(intent);
+
+            }
+        });
+
+        viewResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EventActions.this, viewResult.class);
+                intent.putExtra("position", position);
+                intent.putExtra("eventList", eventList);
+                startActivity(intent);
+
+
             }
         });
 

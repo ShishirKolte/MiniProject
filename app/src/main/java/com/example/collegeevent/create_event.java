@@ -22,6 +22,7 @@ public class create_event extends AppCompatActivity {
     EditText eventDate;
     EditText eventTime;
     EditText eventLevels;
+    EditText eventCompetition;
     FirebaseDatabase DataBase = FirebaseDatabase.getInstance();
     DatabaseReference mEvents = DataBase.getReference("events");
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -39,6 +40,7 @@ public class create_event extends AppCompatActivity {
         eventDate = findViewById(R.id.tDate);
         eventTime = findViewById(R.id.tTime);
         eventLevels = findViewById(R.id.tLevels);
+        eventCompetition = findViewById(R.id.tCompetitionName);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +52,7 @@ public class create_event extends AppCompatActivity {
                 childRef.child("eventDate").setValue(eventDate.getText().toString());
                 childRef.child("eventTime").setValue(eventTime.getText().toString());
                 childRef.child("eventLevels").setValue(eventLevels.getText().toString());
+                childRef.child("eventCompetition").setValue(eventCompetition.getText().toString());
                 childRef.child("eventAdmin").setValue(mUser.getUid());
 
 

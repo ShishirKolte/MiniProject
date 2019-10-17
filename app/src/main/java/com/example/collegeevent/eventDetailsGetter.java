@@ -10,18 +10,19 @@ public class eventDetailsGetter implements Serializable {
     private  String eventDate;
     private String eventTime;
     private String eventLevels;
-
+    private String eventCompetition;
 
     public eventDetailsGetter() {
     }
 
-    public eventDetailsGetter(String eventName, String eventDesc, String eventAdmin, String eventDate, String eventTime, String eventLevels) {
+    public eventDetailsGetter(String eventName, String eventDesc, String eventAdmin, String eventDate, String eventTime, String eventLevels, String eventCompetition) {
         this.eventName = eventName;
         this.eventDesc = eventDesc;
         this.eventAdmin = eventAdmin;
         this.eventDate = eventDate;
         this.eventTime = eventTime;
         this.eventLevels = eventLevels;
+        this.eventCompetition = eventCompetition;
     }
 
     public String getEventName() {
@@ -47,4 +48,6 @@ public class eventDetailsGetter implements Serializable {
     public String getEventLevels() {
         return eventLevels;
     }
+
+    public String getEventCompetition() { return  eventCompetition; }
 }

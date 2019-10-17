@@ -74,32 +74,6 @@
         app:layout_constraintTop_toBottomOf="@+id/tRegister" />
 
     <EditText
-        android:id="@+id/tDate"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="@string/date_register"
-        android:inputType="date"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tYearRegister" />
-
-    <EditText
-        android:id="@+id/tTimeRegister"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="110dp"
-        android:ems="10"
-        android:hint="@string/time_register"
-        android:inputType="time"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tDate"
-        app:layout_constraintTop_toBottomOf="@+id/tYearRegister" />
-
-    <EditText
         android:id="@+id/tYearRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -121,7 +95,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.693"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tTimeRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/tYearRegister" />
 
     <ImageView
         android:id="@+id/iLogo3"

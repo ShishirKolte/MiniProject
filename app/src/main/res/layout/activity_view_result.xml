@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".viewResult">
@@ -43,4 +44,64 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/tWinnerDisplay1"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/winner_display"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tViewResult" />
+
+    <TextView
+        android:id="@+id/tRunnerUpDisplay"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginEnd="166dp"
+        android:text="@string/first_runner_up_display"
+        app:layout_constraintEnd_toStartOf="@id/tWinnerDisplay1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tWinnerDisplay1" />
+
+    <TextView
+        android:id="@+id/tSecondRunnerUp"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="94dp"
+        android:text="@string/second_runner_up_display"
+        app:layout_constraintEnd_toStartOf="@+id/tSecondRunnerUpEmpty"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tRunnerUpDisplay" />
+
+    <TextView
+        android:id="@+id/tWinnerEmpty"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="67dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tWinnerDisplay1"
+        app:layout_constraintTop_toBottomOf="@+id/tViewResult" />
+
+    <TextView
+        android:id="@+id/tFirstRunnerUpDisplay"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="67dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tRunnerUpDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/tWinnerEmpty" />
+
+    <TextView
+        android:id="@+id/tSecondRunnerUpEmpty"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="67dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tSecondRunnerUp"
+        app:layout_constraintTop_toBottomOf="@+id/tFirstRunnerUpDisplay" />
 </androidx.constraintlayout.widget.ConstraintLayout>
